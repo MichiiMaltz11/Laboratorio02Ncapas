@@ -1,0 +1,228 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Laboratorio02Ncapas
+meta:
+  id: wrk_acd67dd97f074b3181cba28ce7f46bc9
+  created: 1777940602414
+  modified: 1777940602414
+  description: ""
+collection:
+  - url: http://localhost:8080/api/sorcerers/
+    name: New Request
+    meta:
+      id: req_5738298284a64f82b8c15597f2708112
+      created: 1777941447204
+      modified: 1777954274190
+      isPrivate: false
+      description: ""
+      sortKey: -1777941447204
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "name": "Yuji Itadori",
+            "grade": "Grado 1",
+            "cursedTech": "Flashaso",
+        		"school": "Tokyo",
+        		"cursedEnergy": 3489,
+        		"isActive": true
+        }	
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/sorcerers/
+    name: New Request
+    meta:
+      id: req_a4a7df7235654275aa867e37497755ae
+      created: 1777954251932
+      modified: 1777954305467
+      isPrivate: false
+      description: ""
+      sortKey: -1777954251932
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/sorcerers/2fa511f4-ebff-44fe-a76d-beaa3bf0ab9d
+    name: New Request
+    meta:
+      id: req_611fa7621cee49c59eb4b77dd463c1a4
+      created: 1777954800924
+      modified: 1777954856217
+      isPrivate: false
+      description: ""
+      sortKey: -1777954800924
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/sorcerers/2fa511f4-ebff-44fe-a76d-beaa3bf0ab9d
+    name: New Request
+    meta:
+      id: req_17b8eefeb059477c81e058614a4f82d2
+      created: 1777955364726
+      modified: 1777958037775
+      isPrivate: false
+      description: ""
+      sortKey: -1777955364726
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Todou nose",
+        	"isActive": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/sorcerers/2fa511f4-ebff-44fe-a76d-beaa3bf0ab9d
+    name: New Request
+    meta:
+      id: req_a558b0d4bd064c44bb0ad8b83f738e09
+      created: 1777956055605
+      modified: 1777956067902
+      isPrivate: false
+      description: ""
+      sortKey: -1777956055605
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/sorcerers/active
+    name: New Request
+    meta:
+      id: req_3e537e8993c94d6b8a2ed53099668e12
+      created: 1777958029836
+      modified: 1777958611061
+      isPrivate: false
+      description: ""
+      sortKey: -1777958029836
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/sorcerers/grade/Grado 1
+    name: New Request
+    meta:
+      id: req_d04ea8b093b046cfb4745bb51f2efab8
+      created: 1777958368806
+      modified: 1777958612311
+      isPrivate: false
+      description: ""
+      sortKey: -1777958368806
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/sorcerers/school/Tokyo
+    name: New Request
+    meta:
+      id: req_76c23e49dbd147f8858bb7f323bf8fd7
+      created: 1777958602516
+      modified: 1777958646389
+      isPrivate: false
+      description: ""
+      sortKey: -1777958602516
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_ea4555412bdfc863e92a4db9896f4d8bce2f1a5e
+    created: 1777940602420
+    modified: 1777940602420
+environments:
+  name: Base Environment
+  meta:
+    id: env_ea4555412bdfc863e92a4db9896f4d8bce2f1a5e
+    created: 1777940602417
+    modified: 1777940602417
+    isPrivate: false
