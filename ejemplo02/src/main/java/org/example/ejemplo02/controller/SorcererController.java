@@ -1,8 +1,8 @@
 package org.example.ejemplo02.controller;
 
 import lombok.AllArgsConstructor;
-import org.example.ejemplo02.domain.entity.Product;
-import org.example.ejemplo02.service.ProductService;
+import org.example.ejemplo02.domain.entity.Sorcerer;
+import org.example.ejemplo02.service.SorcererService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/api/sorcerer")
 @AllArgsConstructor
 
-public class ProductController {
-    private final ProductService productService;
+public class SorcererController {
+    private final SorcererService sorcererService;
 
     @PostMapping("/create")
-    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
-        productService.createProduct(product);
+    public ResponseEntity<Sorcerer> createSorcerer(@RequestBody Sorcerer sorcerer) {
+        sorcererService.createSorcerer(sorcerer);
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(product);
+        return ResponseEntity.status(HttpStatus.CREATED).body(sorcerer);
     }
 }
