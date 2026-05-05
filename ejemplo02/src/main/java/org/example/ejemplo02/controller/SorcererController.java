@@ -37,6 +37,21 @@ public class SorcererController {
         return ResponseEntity.status(HttpStatus.OK).body(list);
     }
 
+    @GetMapping("/school/{school}")
+    public ResponseEntity<List<Sorcerer>> getSorcerersBySchool(@PathVariable String school) {
+        return ResponseEntity.status(HttpStatus.OK).body(sorcererService.getSorcerersBySchool(school));
+    }
+
+    @GetMapping("/grade/{grade}")
+    public ResponseEntity<List<Sorcerer>> getSorcerersByGrade(@PathVariable String grade) {
+        return ResponseEntity.status(HttpStatus.OK).body(sorcererService.getSorcerersByGrade(grade));
+    }
+
+    @GetMapping("/active")
+    public ResponseEntity<List<Sorcerer>> getActiveSorcerers() {
+        return ResponseEntity.status(HttpStatus.OK).body(sorcererService.getActiveSorcerers());
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Sorcerer> getSorcererById(@PathVariable UUID id) {
         return ResponseEntity.

@@ -8,6 +8,9 @@ import java.util.UUID;
 public interface SorcererService {
     void createSorcerer(Sorcerer sorcerer);
     List<Sorcerer> getAllSorcerers();
+    List<Sorcerer> getSorcerersBySchool(String school);
+    List<Sorcerer> getSorcerersByGrade(String grade);
+    List<Sorcerer> getActiveSorcerers();
     Sorcerer getSorcererById(UUID id);
     void updateSorcerer(UUID id, Sorcerer sorcerer);
     Sorcerer deleteSorcerer(UUID id);
