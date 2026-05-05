@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +42,19 @@ public class SorcererController {
         return ResponseEntity.
                 status(HttpStatus.OK)
                 .body(sorcererService.getSorcererById(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Sorcerer> updateSorcerer(@PathVariable UUID id, @RequestBody Sorcerer sorcerer) {
+        sorcererService.updateSorcerer(id, sorcerer);
+        return ResponseEntity.status(HttpStatus.OK).body(sorcerer);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Sorcerer> deleteSorcerer(@PathVariable UUID id) {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(sorcererService.deleteSorcerer(id));
     }
 
 
